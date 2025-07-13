@@ -225,11 +225,11 @@
 }
 
 :root {
-    --primary-color: #4c1d95;
-    --secondary-color: #6366f1;
-    --accent-color: #3b82f6;
-    --text-color: #1e1b4b;
-    --text-light: #6366f1;
+    --primary-color: #ececec;
+    --secondary-color: #ffa621;
+    --accent-color: #f59e0b;
+    --text-color: #ffffff;
+    --text-light: #ffa621;
     --text-muted: #a5b4fc;
     --background: #ffffff;
     --surface: #faf5ff;
@@ -245,8 +245,10 @@
     --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
     --gradient-premium: linear-gradient(135deg, #4c1d95 0%, #6366f1 30%, #3b82f6 70%, #8b5cf6 100%);
     --gradient-surface: linear-gradient(135deg, #faf5ff 0%, #f3f4f6 100%);
+    --gradient-dark-gray: linear-gradient(135deg, #1f2937 0%, #374151 50%, #4b5563 100%);
+    --gradient-yellow: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
     --warning: #f59e0b;
-    --success: #059669;
+    --success: #f59e0b;
     --error: #dc2626;
     --font-size-base: 16px;
     
@@ -373,7 +375,7 @@ body {
     font-family: 'Heebo', 'Assistant', 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: rgba(204, 82, 241, 0.3); /* Transparent white */
+    background: rgba(12, 0, 15, 0.3); /* Transparent white */
     font-size: var(--font-size-base);
     direction: rtl;
     overflow-x: hidden;
@@ -446,13 +448,13 @@ body::before {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--gradient-primary);
+    background: var(--gradient-yellow);
     border-radius: 10px;
     border: 2px solid var(--surface);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--gradient-secondary);
+    background: var(--gradient-yellow);
 }
 
 ::-webkit-scrollbar-corner {
@@ -462,7 +464,7 @@ body::before {
 /* Firefox Scrollbar */
 html {
     scrollbar-width: thin;
-    scrollbar-color: #667eea var(--surface);
+    scrollbar-color: #e0af46 var(--surface);
 }
 
 .container {
@@ -477,7 +479,7 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(204, 82, 241, 0.3); /* Transparent white */
+    background: var(--gradient-dark-gray);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(229, 231, 235, 0.3);
     z-index: 1000;
@@ -543,7 +545,7 @@ html {
     border-radius: 50%;
     object-fit: cover;   /* חותך את התמונה במקום למתוח */
     object-position: top; /* כאן הפוקוס עובר לחלק העליון של התמונה */
-    border: 3px solid var(--primary-color);
+    border: 3px solid #f59e0b;
     transition: all 0.3s ease;
     animation: avatarFloat 3s ease-in-out infinite;
 }
@@ -554,7 +556,7 @@ html {
 }
 
 .nav-brand {
-    background: var(--gradient-primary);
+    background: var(--gradient-yellow);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -584,7 +586,7 @@ html {
     left: 50%;
     width: 0;
     height: 0;
-    background: var(--gradient-primary);
+    background: var(--gradient-yellow);
     border-radius: 50%;
     transition: all 0.4s ease;
     transform: translate(-50%, -50%);
@@ -602,7 +604,7 @@ html {
 }
 
 .nav-link.active {
-    background: var(--gradient-primary);
+    background: var(--gradient-yellow);
     color: white;
 }
 
@@ -733,7 +735,7 @@ html {
     position: relative;
     display: flex;
     align-items: center;
-    background: var(--gradient-primary);
+    background: var(--gradient-dark-gray);
     overflow: hidden;
 }
 
@@ -859,7 +861,7 @@ html {
 }
 
 .name-highlight {
-    background: var(--gradient-third);
+    background: var(--gradient-yellow);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -868,14 +870,14 @@ html {
 }
 
 @keyframes glow {
-    from { filter: drop-shadow(0 0 10px rgba(11, 229, 245, 0.5)); }
-    to { filter: drop-shadow(0 0 20px rgba(11, 132, 245, 0.8)); }
+    from { filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.5)); }
+    to { filter: drop-shadow(0 0 20px rgba(245, 158, 11, 0.8)); }
 }
 
 .hero-subtitle {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 600;
-    color: rgb(0, 183, 255);
+    color: #f59e0b;
     margin-bottom: 30px;
     text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.5); /* soft white glow */
 
@@ -916,10 +918,7 @@ html {
 /* Webinar Details Section */
 .webinar-details {
     padding: 60px 0;
-    background: linear-gradient(135deg, 
-        #667eea 0%, 
-        #764ba2 50%,
-        #667eea 100%);
+    background: var(--gradient-dark-gray);
     position: relative;
     overflow: hidden;
 }
@@ -1039,7 +1038,7 @@ html {
     left: 0;
     right: 0;
     height: 6px;
-    background: var(--gradient-primary);
+    background: var(--gradient-yellow);
 }
 
 /* Hero Header */
@@ -1047,7 +1046,6 @@ html {
     padding: 32px 32px 24px;
     text-align: center;
     position: relative;
-    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
 }
 
@@ -1074,16 +1072,15 @@ html {
 .event-title {
     font-size: 2.2rem;
     font-weight: 800;
-    color: white;
+    color: linear-gradient(90deg, #fff700, #ffc800);
     margin: 0 0 8px 0;
     line-height: 1.2;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .event-speaker {
     font-size: 1.4rem;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
+    color: linear-gradient(90deg, #fff700, #ffc800);
     margin: 0 0 24px 0;
 }
 
@@ -1169,7 +1166,7 @@ html {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(246, 243, 59, 0.1) 0%, rgba(211, 182, 17, 0.1) 100%);
 }
 
 /* SVG Icon Styles */
@@ -1186,7 +1183,7 @@ html {
 .icon-calendar,
 .icon-clock,
 .icon-laptop {
-    filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.2));
+    filter: drop-shadow(0 2px 4px rgba(241, 157, 0, 0.2));
 }
 
 .detail-content {
@@ -1212,8 +1209,8 @@ html {
 
 /* Beautiful Edit Panel */
 .edit-panel {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-    border: 2px solid rgba(102, 126, 234, 0.2);
+    background: linear-gradient(135deg, #ffd5190d 0%, rgba(162, 134, 75, 0.05) 100%);
+    border: 2px solid rgba(234, 192, 102, 0.2);
     border-radius: 20px;
     margin: 0 32px 32px;
     padding: 0;
@@ -1381,7 +1378,7 @@ html {
     transform: translateX(-50%);
     width: 60%;
     height: 3px;
-    background: linear-gradient(90deg, transparent 0%, #3b82f6 20%, #6366f1 50%, #8b5cf6 80%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, #f59e0b 20%, #fbbf24 50%, #d97706 80%, transparent 100%);
     border-radius: 2px;
 }
 
@@ -1583,7 +1580,7 @@ html {
     left: 50%;
     width: 0;
     height: 3px;
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-yellow);
     transition: all 0.3s ease;
     transform: translateX(-50%);
     border-radius: 2px;
@@ -1596,7 +1593,7 @@ html {
 .premium-submit-btn {
     width: 100%;
     padding: 22px 35px;
-    background: var(--gradient-premium);
+    background: var(--gradient-yellow);
     border: none;
     border-radius: 16px;
     color: white;
@@ -1637,7 +1634,7 @@ html {
 .premium-submit-btn:hover {
     transform: translateY(-3px) scale(1.01);
     box-shadow: var(--shadow-xl);
-    background: var(--gradient-secondary);
+    background: var(--gradient-yellow);
 }
 
 .premium-submit-btn:active {
@@ -2083,12 +2080,7 @@ html {
 /* About Section */
 .about-section {
     padding: 60px 0;
-    background: linear-gradient(135deg, 
-        #764ba2 0%, 
-        #667eea 25%,
-        #5b73d6 50%,
-        #7c3aed 75%,
-        #764ba2 100%);
+    background: var(--gradient-dark-gray);
     position: relative;
     overflow: hidden;
 }
@@ -2358,12 +2350,7 @@ html {
 /* Updated Lecture Content Section */
 .lecture-content-section {
     padding: 60px 0;
-    background: linear-gradient(135deg, 
-        #5b73d6 0%, 
-        #7c3aed 25%,
-        #667eea 50%,
-        #5b73d6 75%,
-        #764ba2 100%);
+    background: var(--gradient-dark-gray);
     position: relative;
     overflow: hidden;
 }
@@ -2455,10 +2442,20 @@ html {
     backdrop-filter: blur(10px);
 }
 
+.text-yellow-gradient {
+    background: linear-gradient(90deg, #fff700, #ffc800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* for non-webkit support */
+    color: transparent;
+    font-weight: bold;
+    display: inline-block;
+  }
+
 .lecture-description p {
     font-size: 1.3rem;
     font-weight: 500;
-    color: white;
+    color: rgb(255, 208, 53);
     line-height: 1.7;
     margin: 0;
 }
@@ -2480,7 +2477,7 @@ html {
     align-items: center;
     gap: 15px;
     padding: 20px 40px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: var(--gradient-yellow);
     color: white;
     border: none;
     border-radius: 50px;
@@ -2511,7 +2508,7 @@ html {
 .lecture-cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    background: var(--gradient-yellow);
 }
 
 .lecture-cta-button:active {
@@ -2665,7 +2662,7 @@ html {
      
      .hero-description strong {
          font-weight: 700;
-         color: rgb(0, 183, 255);
+         color: #f59e0b;
          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
      }
      
